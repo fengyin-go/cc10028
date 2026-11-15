@@ -617,6 +617,7 @@ test('概览汇总', async ({ page }) => {
   test.setTimeout(300_000)
   const totalNew = modules.length * 3
   await page.goto('/')
+  await page.locator('.stat-value').nth(1).waitFor({ timeout: 10000 })
   const actual = Number(await page.locator('.stat-value').nth(1).innerText())
   expect(actual).toBeGreaterThanOrEqual(totalNew)
 })
