@@ -87,3 +87,4 @@ desktop.ini
 *.db
 *.pid
 *.seed
+*.s11-*
