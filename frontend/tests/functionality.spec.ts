@@ -609,7 +609,7 @@ test('分析看板模块：KPI卡片、运行分析、图表渲染', async ({ pa
 
 test('概览汇总', async ({ page }) => {
   test.setTimeout(300_000)
-  const totalNew = (crudModules.length + dagModules.length + timelineModules.length) * 4
+  const totalNew = modules.length * 3
   await page.goto('/')
   await expect(page.locator('.stat-value').nth(1)).toHaveText(String(totalNew))
 })
